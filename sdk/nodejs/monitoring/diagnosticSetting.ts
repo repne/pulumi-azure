@@ -16,8 +16,8 @@ export class DiagnosticSetting extends pulumi.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param state Any extra arguments used during the lookup.
      */
-    public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DiagnosticSettingState): DiagnosticSetting {
-        return new DiagnosticSetting(name, <any>state, { id });
+    public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DiagnosticSettingState, opts?: pulumi.CustomResourceOptions): DiagnosticSetting {
+        return new DiagnosticSetting(name, <any>state, { ...opts, id: id });
     }
 
     public readonly eventhubAuthorizationRuleId: pulumi.Output<string | undefined>;

@@ -16,8 +16,8 @@ export class ProtectionPolicyVM extends pulumi.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param state Any extra arguments used during the lookup.
      */
-    public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ProtectionPolicyVMState): ProtectionPolicyVM {
-        return new ProtectionPolicyVM(name, <any>state, { id });
+    public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ProtectionPolicyVMState, opts?: pulumi.CustomResourceOptions): ProtectionPolicyVM {
+        return new ProtectionPolicyVM(name, <any>state, { ...opts, id: id });
     }
 
     /**
